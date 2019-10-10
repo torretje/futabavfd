@@ -36,15 +36,16 @@ void setup() {
   digitalWrite(RST, 1);
   delay(500);
   digitalWrite(RST, 0);
+  //Brightness
+  setData(0x1F);
 }
 
 void loop()
 {
   
-  setData(0x1F);
 
   for(int y=0x20;y<0x7F;y++){
-    setData(0x16);//Soft RESET
+    setData(0x16);//Cursor Home
     for(int i=0;i<40;i++){
         setData(y);
      }
@@ -52,7 +53,7 @@ void loop()
   }
 
     for(int y=0xA0;y<0xFF;y++){
-    setData(0x16);//Soft RESET
+    setData(0x16);//Cursor Home
 
       for(int i=0;i<40;i++){
         setData(y);
