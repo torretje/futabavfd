@@ -53,8 +53,7 @@ void loop()
   }
 
     for(int y=0xA0;y<0xFF;y++){
-    setData(0x16);//Cursor Home
-
+      setData(0x16);//Cursor Home
       for(int i=0;i<40;i++){
         setData(y);
         
