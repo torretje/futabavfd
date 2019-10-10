@@ -36,8 +36,8 @@ void setup() {
   digitalWrite(RST, 1);
   delay(500);
   digitalWrite(RST, 0);
-  //Brightness
-  setData(0x1F);
+  //Clear screen cursor home
+  setData(0x14);
 }
 
 void loop()
